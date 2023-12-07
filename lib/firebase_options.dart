@@ -14,6 +14,8 @@ import 'package:flutter/foundation.dart'
 ///   options: DefaultFirebaseOptions.currentPlatform,
 /// );
 /// ```
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -43,38 +45,38 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDHowFiL0d75jAXDPdIXIjflQarPlrw_Bw',
-    appId: '1:2866104611:web:ff90103b25bfc238ebe496',
-    messagingSenderId: '2866104611',
-    projectId: 'roomescape-9363e',
-    authDomain: 'roomescape-9363e.firebaseapp.com',
-    storageBucket: 'roomescape-9363e.appspot.com',
+  static FirebaseOptions web = FirebaseOptions(
+    apiKey: dotenv.env['webApiKey'].toString(),
+    appId: dotenv.env['webAppId'].toString(),
+    messagingSenderId: dotenv.env['messagingSenderId'].toString(),
+    projectId: dotenv.env['projectId'].toString(),
+    authDomain: dotenv.env['authDomain'].toString(),
+    storageBucket: dotenv.env['storageBucket'].toString(),
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCSnYqpzKpR40b95K5hkWLuLtq1IwJ3OKM',
-    appId: '1:2866104611:android:baa23a9649ad5c5bebe496',
-    messagingSenderId: '2866104611',
-    projectId: 'roomescape-9363e',
-    storageBucket: 'roomescape-9363e.appspot.com',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: dotenv.env['androidApiKey'].toString(),
+    appId: dotenv.env['androidAppId'].toString(),
+    messagingSenderId: dotenv.env['messagingSenderId'].toString(),
+    projectId: dotenv.env['projectId'].toString(),
+    storageBucket: dotenv.env['storageBucket'].toString(),
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBHNjeFpsPmvPw3rn-c9ZQsN5qgExGltks',
-    appId: '1:2866104611:ios:9ecbd65cf169b334ebe496',
-    messagingSenderId: '2866104611',
-    projectId: 'roomescape-9363e',
-    storageBucket: 'roomescape-9363e.appspot.com',
-    iosBundleId: 'com.example.roomescapeApp',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: dotenv.env['iosApiKey'].toString(),
+    appId: dotenv.env['iosAppId'].toString(),
+    messagingSenderId: dotenv.env['messagingSenderId'].toString(),
+    projectId: dotenv.env['projectId'].toString(),
+    storageBucket: dotenv.env['storageBucket'].toString(),
+    iosBundleId: dotenv.env['iosBundleId'].toString(),
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBHNjeFpsPmvPw3rn-c9ZQsN5qgExGltks',
-    appId: '1:2866104611:ios:a01018b81844f9c8ebe496',
-    messagingSenderId: '2866104611',
-    projectId: 'roomescape-9363e',
-    storageBucket: 'roomescape-9363e.appspot.com',
-    iosBundleId: 'com.example.roomescapeApp.RunnerTests',
+  static FirebaseOptions macos = FirebaseOptions(
+    apiKey: dotenv.env['iosAppId'].toString(),
+    appId: dotenv.env['macosAppId'].toString(),
+    messagingSenderId: dotenv.env['messagingSenderId'].toString(),
+    projectId: dotenv.env['projectId'].toString(),
+    storageBucket: dotenv.env['storageBucket'].toString(),
+    iosBundleId: dotenv.env['macosBundleId'].toString(),
   );
 }

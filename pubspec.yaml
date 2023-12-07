@@ -26,6 +26,7 @@ dependencies:
   time_picker_sheet: ^0.0.2+1
   dropdown_textfield: ^1.0.8
   dart_openai: ^4.0.0
+  flutter_dotenv: ^5.1.0
 
 dev_dependencies:
   flutter_test:
@@ -37,3 +38,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/all_location.csv
+    - .env
