@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "2866104611",
+    "project_id": "roomescape-9363e",
+    "storage_bucket": "roomescape-9363e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2866104611:android:baa23a9649ad5c5bebe496",
+        "android_client_info": {
+          "package_name": "com.example.roomescape_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSnYqpzKpR40b95K5hkWLuLtq1IwJ3OKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
